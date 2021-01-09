@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Snake Game</title>
+  <link rel='stylesheet' type='text/css' href='./style.css'/>
+  <style>
+    #game-container {
+      display: none;
+    }
+    #popup-container {
+      display: none;
+    }
+    #counter {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="form-container">
+    <h2>Create Game</h2>
+    <button id="create-game-btn">Create</button>
+    <h2>OR</h2>
+    <h2>Join Game</h2>
+    <input placeholder="room code" id="roomCode"/>
+    <button id="join-game-btn">Join</button>
+  </div>
+
+  <div id='game-container'>
+    <h2>Your Game Code: <span id="code"></span></h2>
+    <canvas id='canvas'></canvas>
+  </div>
+
+  <div id="popup-container">
+    <div id="popup">
+      <h2>RESULTS</h2>
+      <div id="results">
+        <div id="players">
+          <h3 id="p1">playerOne</h3>
+          <h3 id="p2">playerTwo</h3>
+        </div>
+        <div id="scores">
+          <h3 id="score1"></h3>
+          <h3 id="score2"></h3>
+        </div>
+      </div>
+      <button id="play-again-btn">Play Again</button>
+      <button id="lobby-btn">Lobby</button>
+    </div>
+  </div>
+
+  <div id="counter">
+    <p id="counter-number"></p>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src='./client.js'></script>
+</body>
+</html>
